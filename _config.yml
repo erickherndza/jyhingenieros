@@ -1,0 +1,4 @@
+exclude:
+  - CLAUDE.md
+  - _build
+  - _data
