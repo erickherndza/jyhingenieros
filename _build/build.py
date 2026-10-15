@@ -167,6 +167,14 @@ I_FB = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d=
 I_IG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>'
 I_DOC = ICON('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6m-3-3 3 3 3-3"/>')
 
+import hashlib
+def _ver(rel):
+    try:
+        return hashlib.md5(open(os.path.join(OUT, rel), 'rb').read()).hexdigest()[:8]
+    except OSError:
+        return '0'
+V_CSS, V_JS = _ver('assets/css/style.css'), _ver('assets/js/main.js')
+
 missing = set()
 def build(lang):
     en = lang == 'en'
@@ -224,7 +232,7 @@ def build(lang):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{A}assets/css/style.css">
+<link rel="stylesheet" href="{A}assets/css/style.css?v={V_CSS}">
 </head>
 <body>
 <a class="skip" href="#main">{t('Saltar al contenido')}</a>
@@ -266,7 +274,7 @@ def build(lang):
 <a class="wa-float" href="https://wa.me/{WA_NUMBER}?text={urllib.parse.quote(t('Hola, me gustaría recibir información sobre sus servicios.'))}" target="_blank" rel="noopener" aria-label="{t('Escríbenos por WhatsApp')}">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.18 1.6 6L4 29l8.1-1.55a12 12 0 0 0 3.94.66C22.68 28.1 28 22.7 28 16.04 28 9.4 22.68 3 16.04 3zm0 21.9c-1.2 0-2.38-.32-3.4-.93l-.24-.15-4.8.92.94-4.67-.16-.25a9.9 9.9 0 0 1-1.52-5.26c0-5.5 4.47-9.97 9.98-9.97 5.5 0 9.98 4.47 9.98 9.97 0 5.5-4.48 10.34-9.78 10.34zm5.47-7.46c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.7.3 1.26.48 1.69.62.7.22 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
 </a>
-<script src="{A}assets/js/main.js"></script>
+<script src="{A}assets/js/main.js?v={V_JS}"></script>
 </body>
 </html>
 """
