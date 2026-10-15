@@ -277,3 +277,31 @@ input:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold
 .wa-float svg{width:34px;height:34px}
 .wa-float:hover{transform:scale(1.08);color:#fff}
 @media (max-width:620px){.wa-float{right:14px;bottom:14px;width:54px;height:54px}}
+
+/* móvil: cabecera más legible */
+@media (max-width:900px){
+  .site-header .bar{min-height:118px}
+  .logo img{height:98px}
+}
+@media (max-width:620px){
+  .topbar{font-size:.8rem}
+  .topbar .wrap{padding:8px 16px;gap:6px}
+  .topbar .row.contact{flex-wrap:nowrap;gap:14px;width:100%;justify-content:flex-start}
+  .topbar .row.contact a{gap:6px;white-space:nowrap}
+  .topbar svg{width:16px;height:16px}
+  .topbar .row.right{width:100%;justify-content:space-between;gap:16px}
+  .lang{font-size:.8rem}
+  .logo{padding:8px 16px 8px 14px}
+  .logo img{height:92px}
+  .burger{width:84px}
+}
+@media (max-width:360px){
+  .topbar{font-size:.74rem}
+  .topbar .row.contact{gap:10px}
+  .topbar svg{width:14px;height:14px}
+}
+@media (max-width:620px){
+  h1{font-size:clamp(1.3rem,calc((100vw - 56px) / 11.8),2.4rem)}
+  .hero{min-height:520px}
+  .hero .wrap{padding-top:56px;padding-bottom:56px}
+}
