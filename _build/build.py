@@ -18,7 +18,7 @@ EN = {
  'Inicio': 'Home', 'Nosotros': 'About us', 'Servicios': 'Services', 'Proyectos': 'Projects', 'Clientes': 'Clients', 'Contacto': 'Contact',
  'Contáctenos': 'Contact us', 'Saltar al contenido': 'Skip to content', 'Abrir menú': 'Open menu', 'Principal': 'Main',
  'Serrallés, Piantini · Santo Domingo, R.D.': 'Serrallés, Piantini · Santo Domingo, D.R.',
- 'Especialistas en presupuestos y construcción de proyectos en República Dominicana y el Caribe.': 'Specialists in budgeting and construction of projects in the Dominican Republic and the Caribbean.',
+ 'Ingeniería de servicios completos: construcción, planificación y control en República Dominicana y el Caribe.': 'Full-service engineering: construction, planning and control in the Dominican Republic and the Caribbean.',
  'Navegación': 'Navigation',
  'Edificaciones': 'Buildings', 'Aeropuertos y obras viales': 'Airports and road works', 'Obras marinas': 'Marine works',
  'Planificación y control': 'Planning and control',
@@ -29,18 +29,19 @@ EN = {
    'José Amado Soler 33, Condominio Roshanna, Suite 4D, Serrallés, Sector Piantini, Santo Domingo, Dominican Republic, 10125',
  '¿Tiene un proyecto en mente?': 'Have a project in mind?', 'Solicitar información': 'Request information',
  # home
- 'J&H Ingenieros | Presupuestos y construcción de proyectos en Santo Domingo': 'J&H Ingenieros | Project budgeting and construction in Santo Domingo',
- 'J&H Ingenieros: empresa de presupuestos de proyectos de construcción en Santo Domingo, supervisión, construcción de obras civiles y marinas.':
-   'J&H Ingenieros: construction project budgeting company in Santo Domingo — supervision, civil and marine works construction.',
- 'Ingeniería de costos y construcción': 'Cost engineering and construction',
- 'Presupuestos, planificación, control de costos, supervisión y construcción de obras civiles y marinas en República Dominicana y el Caribe.':
-   'Budgeting, planning, cost control, supervision and construction of civil and marine works in the Dominican Republic and the Caribbean.',
+ 'J&H Ingenieros | Construcción e ingeniería de servicios completos en Santo Domingo': 'J&H Ingenieros | Construction and full-service engineering in Santo Domingo',
+ 'J&H Ingenieros: empresa de ingeniería de servicios completos en Santo Domingo. Construcción de obras civiles y marinas, planificación, presupuestos, control de costos y supervisión.':
+   'J&H Ingenieros: full-service engineering company in Santo Domingo. Construction of civil and marine works, planning, budgeting, cost control and supervision.',
+ 'Empresa de ingeniería de servicios completos': 'Full-service engineering company',
+ 'Construcción de obras civiles, hoteleras y marinas, con planificación, presupuestos, control de costos y supervisión, en República Dominicana y el Caribe.':
+   'Construction of civil, hotel and marine works, backed by planning, budgeting, cost control and supervision, in the Dominican Republic and the Caribbean.',
  '01. Especialidades': '01. Specialties', '02. Quiénes somos': '02. Who we are', '03. Nuestros servicios': '03. Our services',
  '04. Proyectos': '04. Projects', '05. Misión, visión y valores': '05. Mission, vision and values', '06. Descargas': '06. Downloads',
- 'Ver todos': 'View all', 'Conózcanos': 'Learn more about us',
- 'La primera empresa de ingeniería de costos y presupuestos de la República Dominicana': 'The first cost engineering and budgeting company in the Dominican Republic',
- 'Somos la primera empresa de Ingeniería de costos y presupuestos establecida en la República Dominicana por más de 25 años de ejercicio continuo en el mercado; dándole servicio a importantes empresas de los sectores inmobiliario, hotelero turístico y de transporte aéreo (aeropuertos, helipuertos, hangares); así como para grandes proyectos marinos y viales.':
-   'We are the first cost engineering and budgeting company established in the Dominican Republic, with more than 25 years of continuous practice in the market, serving major companies in the real estate, tourism and hotel, and air transport sectors (airports, heliports, hangars), as well as large marine and road projects.',
+ 'Ver todos': 'View all', 'Construimos y supervisamos hoteles, villas, aeropuertos y obras marinas, con control de costos y de calidad en cada fase del proyecto.': 'We build and supervise hotels, villas, airports and marine works, with cost and quality control at every stage of the project.', 'Presupuestos, planificación, auditoría y tasaciones para decidir con certeza antes y durante la ejecución de la obra.': 'Budgeting, planning, audit and appraisals to make decisions with certainty before and during construction.', 'Nuestros servicios': 'Our services', 'Anterior': 'Previous', 'Siguiente': 'Next', 'Conózcanos': 'Learn more about us',
+ 'Una empresa de ingeniería de servicios completos: planificamos, controlamos y construimos': 'A full-service engineering company: we plan, control and build',
+ 'Somos una empresa de ingeniería de servicios completos: planificación, control y construcción. Con más de 25 años de ejercicio continuo en la República Dominicana, construimos y damos servicio a importantes empresas de los sectores inmobiliario, hotelero turístico y de transporte aéreo (aeropuertos, helipuertos, hangares); así como para grandes proyectos marinos y viales.':
+   'We are a full-service engineering company: planning, control and construction. With more than 25 years of continuous practice in the Dominican Republic, we build for and serve major companies in the real estate, tourism and hotel, and air transport sectors (airports, heliports, hangars), as well as large marine and road projects.',
+ 'Construcción de obras civiles, hoteleras y marinas': 'Construction of civil, hotel and marine works',
  'Presupuestos y control de costos': 'Budgeting and cost control',
  'Supervisión y administración de obras': 'Construction supervision and administration',
  'Auditoría de proyectos y tasaciones': 'Project audits and appraisals',
@@ -260,7 +261,7 @@ def build(lang):
 <footer class="site-footer"><div class="wrap">
   <div class="foot">
     <div><a class="foot-logo" href="index.html"><img src="{A}assets/img/logo.png" alt="{SITE} — Plan · Control · Build"></a>
-      <p>{t('Especialistas en presupuestos y construcción de proyectos en República Dominicana y el Caribe.')}</p></div>
+      <p>{t('Ingeniería de servicios completos: construcción, planificación y control en República Dominicana y el Caribe.')}</p></div>
     <div><h4>{t('Navegación')}</h4><ul>{''.join(f'<li><a href="{h}">{t(l)}</a></li>' for h, l in NAV)}</ul></div>
     <div><h4>{t('Servicios')}</h4><ul>
       {''.join(f'<li><a href="{x["file"]}">{t(x["title"])}</a></li>' for x in SV)}</ul></div>
@@ -303,12 +304,19 @@ def build(lang):
     feat = [m for m in PROJ if m['featured'] and m['file']]
     docs = [('assets/docs/perfil-corporativo-jyh-ingenieros.pdf', 'Perfil de la Empresa'), ('assets/docs/diseno-estructural.pdf', 'Diseño Estructural'),
             ('assets/docs/diseno-electrico.pdf', 'Diseño Eléctrico'), ('assets/docs/diseno-sanitario.pdf', 'Diseño Sanitario')]
+    SLIDES = [('Empresa de ingeniería de servicios completos', 'Construcción de obras civiles, hoteleras y marinas, con planificación, presupuestos, control de costos y supervisión, en República Dominicana y el Caribe.'),
+              ('Construcción, supervisión, costos y control', 'Construimos y supervisamos hoteles, villas, aeropuertos y obras marinas, con control de costos y de calidad en cada fase del proyecto.'),
+              ('Planificación y control', 'Presupuestos, planificación, auditoría y tasaciones para decidir con certeza antes y durante la ejecución de la obra.')]
     home = f"""
-<section class="hero" style="background-image:url({A}assets/img/hero-1.jpg)"><div class="wrap">
-  <h1>{t('Ingeniería de costos y construcción')}</h1>
-  <p class="sub">{t('Presupuestos, planificación, control de costos, supervisión y construcción de obras civiles y marinas en República Dominicana y el Caribe.')}</p>
-  <div class="btns"><a class="btn" href="contacto.html">{t('Contáctenos')} {ARROW}</a><a class="btn navy" href="servicios.html">{t('Servicios')} {ARROW}</a></div>
-</div><div class="arrows" aria-hidden="true"><span>‹</span><span>›</span></div></section>
+<section class="hero hero-slider" aria-roledescription="carousel" aria-label="{t('Nuestros servicios')}">
+  <div class="slides">
+    {''.join(f'<div class="slide{" is-active" if n == 0 else ""}" role="group" aria-roledescription="slide" aria-label="{n+1} / {len(SLIDES)}"><img src="{A}assets/img/slides/slide-{n+1}.jpg" alt="" {"fetchpriority=high" if n == 0 else "loading=lazy"} width="1920" height="900"><div class="wrap">{"<h1>" if n == 0 else "<h2>"}{e(t(ttl))}{"</h1>" if n == 0 else "</h2>"}<p class="sub">{t(sub)}</p><div class="btns"><a class="btn" href="contacto.html">{t("Contáctenos")} {ARROW}</a><a class="btn navy" href="servicios.html">{t("Servicios")} {ARROW}</a></div></div></div>' for n, (ttl, sub) in enumerate(SLIDES))}
+  </div>
+  <div class="slider-ui">
+    <div class="dots">{''.join(f'<button type="button" aria-label="{n+1}"{" aria-current=true" if n == 0 else ""}></button>' for n in range(len(SLIDES)))}</div>
+    <div class="arrows"><button type="button" class="prev" aria-label="{t('Anterior')}">‹</button><button type="button" class="next" aria-label="{t('Siguiente')}">›</button></div>
+  </div>
+</section>
 
 <section class="block"><div class="wrap">
   <div class="label">{t('01. Especialidades')}</div>
@@ -323,9 +331,9 @@ def build(lang):
     <img src="{A}assets/img/hero-2.jpg" alt="J&amp;H Ingenieros" loading="lazy">
     <div class="vr"></div>
     <div>
-      <h2>{t('La primera empresa de ingeniería de costos y presupuestos de la República Dominicana')}</h2>
-      <p>{t('Somos la primera empresa de Ingeniería de costos y presupuestos establecida en la República Dominicana por más de 25 años de ejercicio continuo en el mercado; dándole servicio a importantes empresas de los sectores inmobiliario, hotelero turístico y de transporte aéreo (aeropuertos, helipuertos, hangares); así como para grandes proyectos marinos y viales.')}</p>
-      <ul class="checks"><li>{t('Presupuestos y control de costos')}</li><li>{t('Supervisión y administración de obras')}</li><li>{t('Auditoría de proyectos y tasaciones')}</li></ul>
+      <h2>{t('Una empresa de ingeniería de servicios completos: planificamos, controlamos y construimos')}</h2>
+      <p>{t('Somos una empresa de ingeniería de servicios completos: planificación, control y construcción. Con más de 25 años de ejercicio continuo en la República Dominicana, construimos y damos servicio a importantes empresas de los sectores inmobiliario, hotelero turístico y de transporte aéreo (aeropuertos, helipuertos, hangares); así como para grandes proyectos marinos y viales.')}</p>
+      <ul class="checks"><li>{t('Construcción de obras civiles, hoteleras y marinas')}</li><li>{t('Presupuestos y control de costos')}</li><li>{t('Supervisión y administración de obras')}</li><li>{t('Auditoría de proyectos y tasaciones')}</li></ul>
       <a class="btn" href="nosotros.html">{t('Conózcanos')} {ARROW}</a>
     </div>
   </div>
@@ -360,8 +368,8 @@ def build(lang):
 </div></section>
 {cta()}
 """
-    write('index.html', layout('index.html', t('J&H Ingenieros | Presupuestos y construcción de proyectos en Santo Domingo'),
-          t('J&H Ingenieros: empresa de presupuestos de proyectos de construcción en Santo Domingo, supervisión, construcción de obras civiles y marinas.'), home))
+    write('index.html', layout('index.html', t('J&H Ingenieros | Construcción e ingeniería de servicios completos en Santo Domingo'),
+          t('J&H Ingenieros: empresa de ingeniería de servicios completos en Santo Domingo. Construcción de obras civiles y marinas, planificación, presupuestos, control de costos y supervisión.'), home))
 
     # ---- nosotros ----
     nos = f"""
